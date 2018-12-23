@@ -1,9 +1,61 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-title>
+        Online Players
+      </ion-title>
+      <!-- <ion-button (click)="onSearchToggleClick()" *ngIf="!searchEnabled" shape="round" color="primary" fill="clear"><ion-icon name="search"></ion-icon></ion-button>
+      <ion-button (click)="onSearchToggleClick()" *ngIf="searchEnabled" shape="round" color="primary" fill="clear"><ion-icon name="close"></ion-icon></ion-button> -->
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-searchbar animated *ngIf="searchEnabled"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="http://gsthina.me/blog/wp-content/uploads/2018/10/me.png"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>G Surendar Thina</h2>
+        <!-- <h3>I'm a big deal</h3> -->
+        <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+      </ion-label>
+      <ion-button shape="round" color="primary" fill="outline"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="http://gsthina.me/blog/wp-content/uploads/2018/10/me.png"/>
+    </ion-avatar>
+    <ion-label>
+      <h2>G Surendar Thina</h2>
+      <!-- <h3>I'm a big deal</h3> -->
+      <p>Listen, I've had a pretty messed up day...</p>
+    </ion-label>
+    <ion-button shape="round" color="primary" fill="outline"><ion-icon name="add"></ion-icon></ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="http://gsthina.me/blog/wp-content/uploads/2018/10/me.png"/>
+    </ion-avatar>
+    <ion-label>
+      <h2>G Surendar Thina</h2>
+      <h3>I'm a big deal</h3>
+      <!-- <p>Listen, I've had a pretty messed up day...</p> -->
+    </ion-label>
+    <ion-button shape="round" color="primary" fill="outline"><ion-icon name="add"></ion-icon></ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="http://gsthina.me/blog/wp-content/uploads/2018/10/me.png"/>
+    </ion-avatar>
+    <ion-label>
+      <h2>G Surendar Thina</h2>
+      <h3>I'm a big deal</h3>
+      <p>Listen, I've had a pretty messed up day...</p>
+    </ion-label>
+    <ion-button shape="round" color="primary" fill="outline"><ion-icon name="add"></ion-icon></ion-button>
+  </ion-item>
+</ion-content>
