@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- <ion-content>
+  <ion-card class="grey">
+    <h1 *ngIf="name!=''" id="letter">{{name}}</h1>
+    <h1 *ngIf="name==''" id="letter">.</h1>
+  </ion-card>
+  <ion-item no-lines>
+    <ion-input required type="text" placeholder="Click here to type..." [autofocus]="true" [(ngModel)]="name" (keyup)="onKeyUp()"></ion-input>
+    <ion-button item-end shape="round" color="primary" fill="clear"><ion-icon name="send"></ion-icon></ion-button>
+  </ion-item>
+</ion-content> -->
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-3 class="archive" *ngFor="let i = index; let country of archievedCountryList">
+            <span *ngIf="i==highLightNumber" style="background-color: red; color: white; padding: 5px;">{{country}}</span>
+            <span *ngIf="i!=highLightNumber">{{country}}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-item no-lines>
+      <ion-input *ngIf="!countryExists" style="border: 2px solid red;" required type="text" placeholder="Enter Country name" [autofocus]="true" [(ngModel)]="countryName" (keyup)="onKeyUp()"></ion-input>
+      <ion-input *ngIf="countryExists" required type="text" placeholder="Enter Country name" [autofocus]="true" [(ngModel)]="countryName" (keyup)="onKeyUp()"></ion-input>
+      <ion-button (click)="archieveCountry(countryName)" item-end shape="round" color="primary" fill="clear"><ion-icon name="send"></ion-icon></ion-button>
+  </ion-item>
+</ion-footer>
